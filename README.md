@@ -5,6 +5,7 @@ Afterwards we withdraw again before the target contract has time to process the 
 We use this fallback function so we can restart the process and the target contract fails to update the balance, allowing us to withdraw funds which do not belong to us.
 
 
+
 interface reentancy {
     function donate(address _to) external payable;
     function withdraw(uint _amount) external;
