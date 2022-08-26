@@ -1,6 +1,6 @@
 # reentrancy-attack
 shocase of reentrancy attack 
-A reentrancy attack is essentially us creating another smart contract to interact with the target contract. We first send an amount of eth to it and in the same function withdraw. 
+A reentrancy attack is essentially us creating another smart contract to interact with the target contract and call a function before the target contract has time to process our previous transaction. We first send an amount of eth to it and in the same function withdraw. 
 Afterwards we withdraw again before the target contract has time to process the transaction. In the process we need a fallback function to use within the time frame of sending money and receiving money.
 We use this fallback function so we can restart the process and the target contract fails to update the balance, allowing us to withdraw funds which do not belong to us.
 
